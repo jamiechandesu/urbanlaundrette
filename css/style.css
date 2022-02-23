@@ -1,0 +1,201 @@
+@import url("https://use.typekit.net/lfy8zxf.css");
+@import url("https://use.typekit.net/lfy8zxf.css");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
+
+/* 
+---------- fonts
+Bilo ExtraLight
+font-family: bilo, sans-serif;
+font-weight: 300;
+font-style: normal; 
+
+Roc Grotesk Bold
+font-family: roc-grotesk, sans-serif;
+font-weight: 600;
+font-style: normal;
+
+font-family: 'Nanum Gothic Coding', monospace;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* header */
+header {
+  background: #171717;
+  width: 17rem;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* overflow-x: hidden; */
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+header p {
+  font-family: bilo, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.logo {
+  margin-top: 2rem;
+}
+
+.logo p {
+  margin-top: 1rem;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+}
+
+.kcg {
+  width: 10rem;
+  height: 10rem;
+  background-color: #636a52;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.kcg span {
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+/* section 1 */
+.sec1 {
+  margin-left: 17rem;
+  height: 100vh;
+  background: #171717;
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper video,
+.swiper img {
+  width: 100%;
+}
+
+.swiper-navigator {
+  position: relative;
+  bottom: 0;
+}
+
+.swiper-navigator button {
+  background: none;
+  border: 0;
+  position: absolute;
+  bottom: 2.8rem;
+  z-index: 999;
+  outline: none;
+}
+
+.swiper-button-prev {
+  left: 45%;
+}
+
+.swiper-button-next {
+  right: 45%;
+}
+
+.swiper-text-content {
+  position: fixed;
+  top: 4.5rem;
+  right: 4.5rem;
+  text-align: right;
+  z-index: 999;
+  color: #fff;
+}
+
+.swiper-text-content h2 {
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 7.2rem;
+}
+
+.swiper-text-content h3 {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+/* section 2 */
+.sec2-wrapper {
+  background: #f2f2f2;
+}
+
+.sec2 {
+  background: #f2f2f2;
+  margin-left: 17rem;
+  width: calc(100% - 20rem);
+  height: 100vh;
+  text-align: center;
+  padding-top: 6.5rem;
+  overflow-x: auto;
+}
+
+.sec2 h2,
+.sec2 h3,
+.sec2 h4 {
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.sec2 h2 {
+  font-size: 6.2rem;
+  color: #171717;
+  margin-bottom: 2rem;
+}
+
+.sec2 h3 {
+  font-size: 2rem;
+  color: #636a52;
+}
+
+.sec2 h4 {
+  font-size: 3rem;
+  color: #171717;
+}
+
+.sec2 h5 {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.sec2-contents {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-align: left;
+  gap: 4rem;
+  margin-left: 4rem;
+}
