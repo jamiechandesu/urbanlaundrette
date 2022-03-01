@@ -27,40 +27,52 @@ font-family: 'Nanum Gothic Coding', monospace;
 
 html {
   font-size: 62.5%;
-  overflow: auto;
 }
 
-#wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+::selection {
+  background: #171717;
+  color: #fff;
 }
 
-.sec {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  padding-left: 20rem;
+::-moz-selection {
+  background: #171717;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* header */
 header {
-  background: #171717;
+  background: transparent;
   width: 17rem;
-  height: 100%;
+  height: 100vh;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
+  bottom: 0;
   text-align: center;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  z-index: 99999;
+}
+
+.header {
+  width: 17rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header-wrapper {
+  background-color: #171717;
+  width: 17rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 header p {
@@ -78,9 +90,20 @@ header p {
   margin-top: 1rem;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu-btn {
   background: none;
   border: none;
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  z-index: 99999;
+  cursor: pointer;
 }
 
 .kcg {
@@ -92,6 +115,9 @@ header p {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
 }
 
 .kcg span {
@@ -132,6 +158,7 @@ header p {
   bottom: 2.8rem;
   z-index: 999;
   outline: none;
+  cursor: pointer;
 }
 
 .swiper-button-prev {
@@ -165,35 +192,28 @@ header p {
 }
 
 /* section 2 */
-
-.sec2 {
-  background: #f2f2f2;
-  padding-left: 20rem;
-  padding-right: 20rem;
-  /* width: calc(100% - 17rem); */
-  width: fit-content;
-  height: 100vh;
-  text-align: center;
-  padding-top: 6.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 4rem;
-  gap: 3rem;
-}
-
 #sectionPin {
   height: 100vh;
-  /* overflow: hidden; */
   display: flex;
+}
+
+.sec2 {
+  height: 100vh;
+  background: #f2f2f2;
+  text-align: center;
+  padding-top: 6.5rem;
+  margin-left: 17rem;
+  padding-left: 4rem;
+  gap: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sec2-contents {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
   text-align: left;
   gap: 4rem;
-  margin-left: 4rem;
 }
 
 .content img {
@@ -238,28 +258,64 @@ h4 {
 
 /* section 3 */
 .sec3 {
+  width: calc(100% - 17rem);
+  height: 100vh;
+  margin-left: 17rem;
   background-color: #f2f2f2;
-  top: 200%;
+}
+
+.direction-block-one {
+  transform: translateX(-4vw) rotate(5deg);
+}
+
+.direction-block-two {
+  transform: translateX(8vw) rotate(-3deg);
+}
+
+.direction-block-three {
+  transform: translateX(3vw) rotate(2deg);
+}
+
+.direction-block-four {
+  transform: translateX(-9vw) rotate(-8deg);
 }
 
 .direction span:not(.phrase04) {
-  display: block;
-  font-size: 17rem;
-  white-space: nowrap;
-  background: #636a52;
-  color: #fff;
-}
-
-.phrase04 {
-  display: block;
+  display: inline-block;
   font-size: 17rem;
   white-space: nowrap;
   background: #fff;
   color: #171717;
+  text-transform: uppercase;
+}
+
+.parallax {
+  position: relative;
+}
+
+.parallax h2 {
+  font-size: 8rem;
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #fff;
+  position: absolute;
+  top: 54rem;
+  left: 5rem;
+}
+
+.phrase04 {
+  display: inline-block;
+  font-size: 12rem;
+  white-space: nowrap;
+  color: #171717;
+  text-transform: uppercase;
 }
 
 /* section 4 */
 .sec4 {
-  background-color: green;
-  top: 300%;
+  width: calc(100% - 17rem);
+  height: 100vh;
+  margin-left: 17rem;
+  color: #171717;
 }
